@@ -1,0 +1,4 @@
+LoadingIcon
+===========
+
+CSS icon framework
