@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+$icon-width:	15px;
+$icon-height:	15px;
+$animationtime:	2s;
+
+.lic-geta {
+	@include icon-display;
+	width:$icon-width;
+	height:$icon-height;
+	@include box-sizing(border-box);
+	border:solid $icon-width/3 $color-1;
+	border-bottom-color:$color-2;
+	border-right:transparent;
+	border-left:transparent;
+	animation: $animationtime rotate-quarter infinite;
+	-webkit-animation: $animationtime rotate-quarter infinite;
+}

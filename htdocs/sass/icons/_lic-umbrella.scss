@@ -1,0 +1,29 @@
+@charset "UTF-8";
+$icon-width: 20px;
+$icon-height: 20px;
+$animationtime: 2s;
+
+.lic-umbrella {
+	@include icon-display;
+	width: $icon-width;
+	height: $icon-height;
+	border: solid 1px $color-1;
+	@include border-radius($icon-width);
+
+	&:before {
+		@include pseudo-display;
+		width: 0;
+		height: 0;
+		top:50%;
+		left:50%;
+		margin-top:-$icon-height/2;
+		margin-left:-$icon-width/2;
+		border:solid $icon-height/2 $color-1;
+		//border-style: solid;
+		//border-width: $icon-height/4;
+		border-color:$color-1 transparent;
+		@include border-radius($icon-width/2);
+		animation: $animationtime rotate-reverse linear infinite;
+		-webkit-animation: $animationtime rotate-reverse linear infinite;
+	}
+}

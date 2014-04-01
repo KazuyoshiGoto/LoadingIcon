@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+$icon-width: 30px;
+$icon-height: 30px;
+$animationtime: 2s;
+
+.lic-satellite-3d {
+	@include icon-display;
+	width:$icon-width;
+	height:$icon-height;
+	overflow: hidden;
+	&:before, &:after {
+		@include pseudo-display;
+		@include border-radius($icon-width);
+	}
+	&:before {
+		background: $color-1;
+		width: $icon-width/5*3;
+		height: $icon-height/5*3;
+		top:50%;
+		left:50%;
+		margin-top:-$icon-height/5*3/2;
+		margin-left:-$icon-width/5*3/2;
+		z-index: 1;
+	}
+	&:after {
+		background: $color-2;
+		width: $icon-width/6;
+		height: $icon-height/6;
+		top:50%;
+		left:0;
+		margin-top:-$icon-height/12;
+		z-index: 2;
+		animation: $animationtime satellite infinite;
+		-webkit-animation: $animationtime satellite infinite;
+	}
+}
+
+@keyframes satellite {
+	0% {
+		left:0;
+		z-index: 2;
+		margin-top:-$icon-height/12;
+	}
+	49% {
+		z-index: 2;
+	}
+	24% {
+		margin-top:-$icon-height/12 + $icon-height/9;
+	}
+	50% {
+		left:$icon-width - $icon-width/6;
+		z-index: 0;
+		margin-top:-$icon-height/12;
+	}
+	99% {
+		z-index: 0;
+	}
+	74% {
+		margin-top:-$icon-height/12 - $icon-height/9;
+	}
+	100% {
+		left:0;
+		z-index: 2;
+	}
+}
+@-webkit-keyframes satellite {
+	0% {
+		left:0;
+		z-index: 2;
+		margin-top:-$icon-height/12;
+	}
+	49% {
+		z-index: 2;
+	}
+	24% {
+		margin-top:-$icon-height/12 + $icon-height/9;
+	}
+	50% {
+		left:$icon-width - $icon-width/6;
+		z-index: 0;
+		margin-top:-$icon-height/12;
+	}
+	99% {
+		z-index: 0;
+	}
+	74% {
+		margin-top:-$icon-height/12 - $icon-height/9;
+	}
+	100% {
+		left:0;
+		z-index: 2;
+	}
+}

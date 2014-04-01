@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+$icon-width:	20px;
+$icon-height:	20px;
+.lic-satellite {
+	@include icon-display;
+	width:$icon-width/2;
+	height:$icon-height/2;
+	margin:$icon-width/2;
+	background-color:$color-1;
+	@include border-radius($icon-width);
+	animation: 1s rotate infinite;
+	-webkit-animation: 1s rotate infinite;
+
+	&:before, &:after {
+		@include pseudo-display;
+		left:50%;
+		width: $icon-width/4;
+		height: $icon-height/4;
+		margin-left:-$icon-width/4/2;
+		background-color: $color-2;
+		@include border-radius($icon-width/4);
+	}
+	&:before {
+		top:-$icon-width/3;
+	}
+	&:after {
+		bottom:-$icon-width/3;
+	}
+}

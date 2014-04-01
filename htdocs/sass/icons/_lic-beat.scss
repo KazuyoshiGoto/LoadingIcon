@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+$icon-width:	20px;
+$icon-height:	20px;
+$icon-color:	$color-1;
+$animationtime:	1s;
+
+.lic-beat {
+	@include icon-display;
+	width:$icon-width/2;
+	height:$icon-height/2;
+	margin:$icon-height/2;
+	@include border-radius($icon-width);
+	@include box-sizing(border-box);
+	background:$icon-color;
+	animation: $animationtime beat1 infinite;
+	-webkit-animation: $animationtime beat1 infinite;
+
+	&:before {
+		@include pseudo-display;
+		top:0;
+		left:0;
+		width:$icon-width;
+		height:$icon-height;
+		border:solid 1px $color-1;
+		margin-top: -$icon-height/4;
+		margin-left: -$icon-width/4;
+		@include border-radius($icon-width);
+		@include box-sizing(border-box);
+		animation: $animationtime beat2 infinite;
+		-webkit-animation: $animationtime beat2 infinite;
+	}
+}
+@keyframes beat1 {
+	0% {
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		-o-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	50% {
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+	100% {
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes beat1 {
+	0% {
+		-webkit-transform: scale(0.5);
+	}
+	50% {
+		-webkit-transform: scale(1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+@keyframes beat2 {
+	0% {
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		-o-transform: scale(0.5);
+		transform: scale(0.5);
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity: 0.8;
+	}
+	50% {
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity: 0.8;
+	}
+	100% {
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes beat2 {
+	0% {
+		-webkit-transform: scale(0.5);
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 0;
+	}
+}
+

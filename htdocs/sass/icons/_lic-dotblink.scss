@@ -1,0 +1,32 @@
+@charset "UTF-8";
+$icon-width: 15px;
+$icon-height: 15px;
+$animationtime: 1s;
+.lic-dotblink {
+	@include icon-display;
+	width: round($icon-width / 3);
+	height: round($icon-height / 3);
+	margin: round($icon-width / 3) * 2;
+	@include border-radius($icon-width);
+	background: $color-1;
+	animation: $animationtime bgColor-blink $animationtime/4 infinite;
+	-webkit-animation: $animationtime bgColor-blink $animationtime/4 infinite;
+
+	&:before, &:after {
+		@include pseudo-display;
+		width: round($icon-width / 3);
+		height: round($icon-height / 3);
+		@include border-radius($icon-width);
+		background: $color-1;
+	}
+	&:before {
+		left: - round($icon-width / 3) - round($icon-width / 10);
+		animation: $animationtime bgColor-blink infinite;
+		-webkit-animation: $animationtime bgColor-blink infinite;
+	}
+	&:after {
+		right: - round($icon-width / 3) - round($icon-width / 10);
+		animation: $animationtime bgColor-blink $animationtime/2 infinite;
+		-webkit-animation: $animationtime bgColor-blink $animationtime/2 infinite;
+	}
+}

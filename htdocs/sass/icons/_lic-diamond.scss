@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+$icon-width:	16px;
+$icon-height:	16px;
+.lic-diamond {
+	@include icon-display;
+	border:solid $icon-width/2 $color-1;
+	border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	animation: 1s diamond infinite linear;
+	-webkit-animation: 1s diamond infinite linear;
+}
+@keyframes diamond {
+	0% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+	25% {border-color: rgba($color-1,.25) $color-1 rgba($color-1,.75) rgba($color-1,.50);}
+	50% {border-color: rgba($color-1,.50) rgba($color-1,.25) $color-1 rgba($color-1,.75);}
+	75% {border-color: rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25) $color-1;}
+	100% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+}
+@-webkit-keyframes diamond {
+	0% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+	25% {border-color: rgba($color-1,.25) $color-1 rgba($color-1,.75) rgba($color-1,.50);}
+	50% {border-color: rgba($color-1,.50) rgba($color-1,.25) $color-1 rgba($color-1,.75);}
+	75% {border-color: rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25) $color-1;}
+	100% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+}

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+$icon-width:	20px;
+$icon-height:	20px;
+.lic-clock {
+	@include icon-display;
+	width:$icon-width;
+	height:$icon-height;
+	background-color:$color-1;
+	@include border-radius($icon-width);
+
+	&:before,&:after {
+		@include pseudo-display;
+		top:50%;
+		left:50%;
+	}
+	&:before {
+		margin-top:-$icon-width/2;
+		margin-left:-$icon-width/10/2;
+		width: $icon-width/10;
+		border-top:solid $icon-width/2 rgba($color-white,.5);
+		border-bottom:solid $icon-width/2 transparent;
+		animation: 180s rotate infinite linear;
+		-webkit-animation: 180s rotate infinite linear;
+	}
+	&:after {
+		margin-top:-$icon-width/2;
+		margin-left:-$icon-width/10/2;
+		width: $icon-width/10;
+		border-top:solid $icon-width/2 $color-white;
+		border-bottom:solid $icon-width/2 transparent;
+		animation: 3s rotate infinite linear;
+		-webkit-animation: 3s rotate infinite linear;
+	}
+}
+
+
+.lic-clock-alt {
+	@include icon-display;
+	width:$icon-width;
+	height:$icon-height;
+	border:solid 1px $color-1;
+	@include border-radius($icon-width);
+
+	&:before,&:after {
+		@include pseudo-display;
+		top:50%;
+		left:50%;
+	}
+	&:before {
+		margin-top:-$icon-width/2;
+		margin-left:-$icon-width/10/2;
+		width: $icon-width/10;
+		border-top:solid $icon-width/2 rgba($color-1,.5);
+		border-bottom:solid $icon-width/2 transparent;
+		animation: 180s rotate infinite linear;
+		-webkit-animation: 180s rotate infinite linear;
+	}
+	&:after {
+		margin-top:-$icon-width/2;
+		margin-left:-$icon-width/10/2;
+		width: $icon-width/10;
+		border-top:solid $icon-width/2 $color-1;
+		border-bottom:solid $icon-width/2 transparent;
+		animation: 3s rotate infinite linear;
+		-webkit-animation: 3s rotate infinite linear;
+	}
+}

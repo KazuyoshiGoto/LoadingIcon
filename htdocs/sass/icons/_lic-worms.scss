@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+$icon-width: 15px;
+$icon-height: 15px;
+$animationtime: 2s;
+.lic-worms {
+	@include icon-display;
+	width: $icon-width;
+	height: $icon-height;
+	&:before, &:after {
+		@include pseudo-display;
+		background: $color-1;
+	}
+	&:before {
+		animation: $animationtime worm1 infinite;
+		-webkit-animation: $animationtime worm1 infinite;
+	}
+	&:after {
+		animation: $animationtime worm2 infinite;
+		-webkit-animation: $animationtime worm2 infinite;
+	}
+}
+
+@keyframes worm1 {
+	0% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	12.5% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	25% {
+		top: $icon-height/3*2;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	37.5% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	50% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	62.5% {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	75% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: $icon-width/3*2;
+	}
+	87.5% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	100% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+}
+@-webkit-keyframes worm1 {
+	0% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	12.5% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	25% {
+		top: $icon-height/3*2;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	37.5% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	50% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	62.5% {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	75% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: $icon-width/3*2;
+	}
+	87.5% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	100% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+}
+
+@keyframes worm2 {
+	0% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	12.5% {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	25% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: $icon-width/3*2;
+	}
+	37.5% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	50% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	62.5% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	75% {
+		top: $icon-height/3*2;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	87.5% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	100% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+}
+@-webkit-keyframes worm2 {
+	0% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	12.5% {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+	25% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: $icon-width/3*2;
+	}
+	37.5% {
+		top: 0;
+		right: 0;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	50% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: $icon-height/3*2;
+		left: 0;
+	}
+	62.5% {
+		top: 0;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	75% {
+		top: $icon-height/3*2;
+		right: $icon-width/3*2;
+		bottom: 0;
+		left: 0;
+	}
+	87.5% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	100% {
+		top: $icon-height/3*2;
+		right: 0;
+		bottom: 0;
+		left: $icon-width/3*2;
+	}
+}

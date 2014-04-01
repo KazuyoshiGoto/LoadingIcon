@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+$icon-width:	20px;
+$icon-height:	20px;
+
+.lic-whirl {
+	@include icon-display;
+	width:$icon-width;
+	height:$icon-height;
+	border-radius:$icon-width;
+	border-bottom:solid 2px $color-1;
+	animation: 1s rotate linear infinite;
+	-webkit-animation: 1s rotate linear infinite;
+
+	&:before {
+		@include pseudo-display;
+		top:50%;
+		left:50%;
+		width:$icon-width/2;
+		height:$icon-height/2;
+		margin-top:-$icon-height/2/2;
+		margin-left:-$icon-height/2/2;
+		border-radius:$icon-width/2;
+		border-right:solid 1px $color-1;
+		animation: 1s rotate linear infinite;
+		-webkit-animation: 1s rotate linear infinite;
+	}
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+$icon-width:	20px;
+$icon-height:	20px;
+.lic-flipcircle {
+	@include icon-display;
+	width:$icon-width;
+	height:$icon-height;
+	@include border-radius($icon-width);
+	background: $color-1;
+	animation:
+		flip-color 2s linear infinite,
+		flip-xy 2s linear infinite;
+	-webkit-animation:
+		flip-color 2s linear infinite,
+		flip-xy 2s linear infinite;
+}
