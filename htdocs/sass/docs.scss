@@ -164,14 +164,3 @@ hr {
 .clearfix {
 	*zoom: 1;
 }
-
-
-#{headings()} {
-	display: inline-block;
-}
-#{headings(4)} {
-	font-size:30px;
-}
-#{headings(3, 4)} {
-	color: #069;
-}

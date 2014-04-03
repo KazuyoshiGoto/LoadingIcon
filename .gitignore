@@ -13,11 +13,12 @@ tmp/
 *~.nib
 local.properties
 .classpath
-.settings/
+.settings
 .loadpath
-.sass-cache/
+.sass-cache
 .idea
 node_modules
+src
 
 # External tool builders
 .externalToolBuilders/
