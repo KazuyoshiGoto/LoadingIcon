@@ -1,0 +1,58 @@
+@charset "UTF-8";
+$icon-width:	30px;
+$icon-height:	10px;
+$icon-color:	$color-1;
+
+.lic-gradientwave {
+	@include icon-display;
+	width:$icon-width;
+	height:$icon-height;
+	border-radius:$icon-height/5;
+	animation: 0.5s gradient-wave infinite;
+	-webkit-animation: 0.5s gradient-wave infinite;
+	//background-color: #cccccc;
+	@include filter-gradient(#cccccc, #333333, horizontal);
+	background-image: linear-gradient(to right, rgba($color-gray, .25) 0%, rgba($color-gray, .25) 25%, rgba($color-gray, .5) 25%, rgba($color-gray, .5) 50%, rgba($color-gray, .75) 50%, rgba($color-gray, .75) 75%, rgba($color-gray,1) 75%, rgba($color-gray,1) 100%);
+	@include background-image(linear-gradient(left,  rgba($color-gray,.25) 0%,rgba($color-gray,.25) 25%,rgba($color-gray,.5) 25%,rgba($color-gray,.5) 50%,rgba($color-gray,.75) 50%,rgba($color-gray,.75) 75%,rgba($color-gray,1) 75%,rgba($color-gray,1) 100%));
+}
+
+@keyframes gradient-wave {
+	0% {
+		background-image: linear-gradient(to right, rgba($color-gray, .25) 0%, rgba($color-gray, .25) 25%, rgba($color-gray, .5) 25%, rgba($color-gray, .5) 50%, rgba($color-gray, .75) 50%, rgba($color-gray, .75) 75%, rgba($color-gray,1) 75%, rgba($color-gray,1) 100%);
+		@include background-image(linear-gradient(left,  rgba($color-gray,.25) 0%,rgba($color-gray,.25) 25%,rgba($color-gray,.5) 25%,rgba($color-gray,.5) 50%,rgba($color-gray,.75) 50%,rgba($color-gray,.75) 75%,rgba($color-gray,1) 75%,rgba($color-gray,1) 100%));
+	}
+	25% {
+		background-image: linear-gradient(to right, rgba($color-gray, 1) 0%, rgba($color-gray, 1) 25%, rgba($color-gray, .25) 25%, rgba($color-gray, .25) 50%, rgba($color-gray, .5) 50%, rgba($color-gray, .5) 75%, rgba($color-gray,.75) 75%, rgba($color-gray,.75) 100%);
+		@include background-image(linear-gradient(left,  rgba($color-gray,1) 0%,rgba($color-gray,1) 25%,rgba($color-gray,.25) 25%,rgba($color-gray,.25) 50%,rgba($color-gray,.5) 50%,rgba($color-gray,.5) 75%,rgba($color-gray,.75) 75%,rgba($color-gray,.75) 100%));
+	}
+	50% {
+		background-image: linear-gradient(to right, rgba($color-gray, .75) 0%, rgba($color-gray, .75) 25%, rgba($color-gray, 1) 25%, rgba($color-gray, 1) 50%, rgba($color-gray, .25) 50%, rgba($color-gray, .25) 75%, rgba($color-gray,.5) 75%, rgba($color-gray,.5) 100%);
+		@include background-image(linear-gradient(left,  rgba($color-gray,.75) 0%,rgba($color-gray,.75) 25%,rgba($color-gray,1) 25%,rgba($color-gray,1) 50%,rgba($color-gray,.25) 50%,rgba($color-gray,.25) 75%,rgba($color-gray,.5) 75%,rgba($color-gray,.5) 100%));
+	}
+	75% {
+		background-image: linear-gradient(to right, rgba($color-gray, .5) 0%, rgba($color-gray, .5) 25%, rgba($color-gray, .75) 25%, rgba($color-gray, .75) 50%, rgba($color-gray, 1) 50%, rgba($color-gray, 1) 75%, rgba($color-gray,.25) 75%, rgba($color-gray,.25) 100%);
+		@include background-image(linear-gradient(left,  rgba($color-gray,.5) 0%,rgba($color-gray,.5) 25%,rgba($color-gray,.75) 25%,rgba($color-gray,.75) 50%,rgba($color-gray,1) 50%,rgba($color-gray,1) 75%,rgba($color-gray,.25) 75%,rgba($color-gray,.25) 100%));
+	}
+	100% {
+		background-image: linear-gradient(to right, rgba($color-gray, .25) 0%, rgba($color-gray, .25) 25%, rgba($color-gray, .5) 25%, rgba($color-gray, .5) 50%, rgba($color-gray, .75) 50%, rgba($color-gray, .75) 75%, rgba($color-gray,1) 75%, rgba($color-gray,1) 100%);
+		@include background-image(linear-gradient(left,  rgba($color-gray,.25) 0%,rgba($color-gray,.25) 25%,rgba($color-gray,.5) 25%,rgba($color-gray,.5) 50%,rgba($color-gray,.75) 50%,rgba($color-gray,.75) 75%,rgba($color-gray,1) 75%,rgba($color-gray,1) 100%));
+	}
+}
+
+@-webkit-keyframes gradient-wave {
+	0% {
+		@include background-image(linear-gradient(left,  rgba($color-gray,.25) 0%,rgba($color-gray,.25) 25%,rgba($color-gray,.5) 25%,rgba($color-gray,.5) 50%,rgba($color-gray,.75) 50%,rgba($color-gray,.75) 75%,rgba($color-gray,1) 75%,rgba($color-gray,1) 100%));
+	}
+	25% {
+		@include background-image(linear-gradient(left,  rgba($color-gray,1) 0%,rgba($color-gray,1) 25%,rgba($color-gray,.25) 25%,rgba($color-gray,.25) 50%,rgba($color-gray,.5) 50%,rgba($color-gray,.5) 75%,rgba($color-gray,.75) 75%,rgba($color-gray,.75) 100%));
+	}
+	50% {
+		@include background-image(linear-gradient(left,  rgba($color-gray,.75) 0%,rgba($color-gray,.75) 25%,rgba($color-gray,1) 25%,rgba($color-gray,1) 50%,rgba($color-gray,.25) 50%,rgba($color-gray,.25) 75%,rgba($color-gray,.5) 75%,rgba($color-gray,.5) 100%));
+	}
+	75% {
+		@include background-image(linear-gradient(left,  rgba($color-gray,.5) 0%,rgba($color-gray,.5) 25%,rgba($color-gray,.75) 25%,rgba($color-gray,.75) 50%,rgba($color-gray,1) 50%,rgba($color-gray,1) 75%,rgba($color-gray,.25) 75%,rgba($color-gray,.25) 100%));
+	}
+	100% {
+		@include background-image(linear-gradient(left,  rgba($color-gray,.25) 0%,rgba($color-gray,.25) 25%,rgba($color-gray,.5) 25%,rgba($color-gray,.5) 50%,rgba($color-gray,.75) 50%,rgba($color-gray,.75) 75%,rgba($color-gray,1) 75%,rgba($color-gray,1) 100%));
+	}
+}

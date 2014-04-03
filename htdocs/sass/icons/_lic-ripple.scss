@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+$icon-width: 20px;
+$icon-height: 20px;
+$animationtime: 1s;
+
+.lic-ripple {
+	@include icon-display;
+	width: $icon-width;
+	height: $icon-height;
+
+	&:before, &:after {
+		@include pseudo-display;
+		width: $icon-width;
+		height: $icon-height;
+		top: 0;
+		left: 0;
+		border:solid 1px $color-1;
+		@include border-radius($icon-width);
+		@include box-sizing(border-box);
+		@include box-shadow(0 0 round($icon-width/10) $color-1, inset 0 0 round($icon-width/10) $color-1);
+		@include transform(scale(0));
+	}
+	&:before {
+		animation: $animationtime ripple infinite;
+		-webkit-animation: $animationtime ripple infinite;
+	}
+	&:after {
+		animation: $animationtime ripple $animationtime/3 infinite;
+		-webkit-animation: $animationtime ripple $animationtime/3 infinite;
+	}
+}
+
+@keyframes ripple {
+	0% {
+		-moz-transform: scale(0);
+		-ms-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity: 1;
+	}
+	50% {
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes ripple {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 0;
+	}
+}

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+$icon-width:	20px;
+$icon-height:	20px;
+$icon-color:	$color-gray;
+
+.lic-orb {
+	@include icon-display;
+	border:solid $icon-width/2 $color-1;
+	border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);
+	@include border-radius($icon-width/2);
+	animation: 1s orb infinite linear;
+	-webkit-animation: 1s orb infinite linear;
+}
+@keyframes orb {
+	0% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+	25% {border-color: rgba($color-1,.25) $color-1 rgba($color-1,.75) rgba($color-1,.50);}
+	50% {border-color: rgba($color-1,.50) rgba($color-1,.25) $color-1 rgba($color-1,.75);}
+	75% {border-color: rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25) $color-1;}
+	100% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+}
+@-webkit-keyframes orb {
+	0% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+	25% {border-color: rgba($color-1,.25) $color-1 rgba($color-1,.75) rgba($color-1,.50);}
+	50% {border-color: rgba($color-1,.50) rgba($color-1,.25) $color-1 rgba($color-1,.75);}
+	75% {border-color: rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25) $color-1;}
+	100% {border-color: $color-1 rgba($color-1,.75) rgba($color-1,.50) rgba($color-1,.25);}
+}
+

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+$icon-width: 15px;
+$icon-height: 15px;
+$animationtime: 1s;
+.lic-wired {
+	@include icon-display;
+	width: $icon-width;
+	height: $icon-height;
+	@include border-radius(round($icon-width/5));
+	@include transform(rotate(45deg));
+	overflow: hidden;
+
+	&:before, &:after {
+		@include pseudo-display;
+		top:50%;
+		left:50%;
+	}
+	&:before {
+		width: round($icon-width / 2);
+		height: round($icon-height * 1.5);
+		background: $color-1;
+		margin-top:- round(round($icon-height * 1.5) / 2);
+		margin-left:- round(round($icon-width / 2) / 2);
+		@include box-shadow(0 0 round($icon-width / 3) $color-1);
+		animation: $animationtime rotate linear infinite;
+		-webkit-animation: $animationtime rotate linear infinite;
+	}
+	&:after {
+		width: $icon-width - round($icon-width/10);
+		height: $icon-height - round($icon-height/10);
+		background: $color-background;
+		margin-top:- ($icon-height - round($icon-height/10)) / 2;
+		margin-left:- ($icon-width - round($icon-width/10)) / 2;
+		@include border-radius(round($icon-width/5));
+	}
+}

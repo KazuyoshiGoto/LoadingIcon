@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+$icon-width: 20px;
+$icon-height: 20px;
+$animationtime: 1s;
+
+.lic-heart {
+	@include icon-display;
+	width: $icon-width;
+	height: $icon-height;
+	margin: round($icon-width/5);
+	animation: $animationtime scale-half infinite;
+	-webkit-animation: $animationtime scale-half infinite;
+
+	&:before, &:after {
+		@include pseudo-display;
+		width: round($icon-width/2);
+		height: $icon-height;
+		top:50%;
+		background: $color-1;
+		@include border-radius($icon-width $icon-width 0 0);
+	}
+	&:before {
+		margin-top: - $icon-height/2;
+		left:round($icon-width/20);
+		@include transform(rotate(-45deg));
+	}
+	&:after {
+		margin-top: - $icon-height/2;
+		right:round($icon-width/20);
+		@include transform(rotate(45deg));
+	}
+}

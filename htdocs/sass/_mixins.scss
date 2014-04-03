@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// Generic Style
+@mixin icon-display() {
+	@include inline-block;
+	position:relative;
+	vertical-align:middle;
+}
+@mixin pseudo-display() {
+	@include inline-block;
+	content:"";
+	position:absolute;
+}

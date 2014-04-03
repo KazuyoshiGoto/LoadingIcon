@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@import "settings";
+@import "compass";
+//@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700);
+
+$color-main: #39a2a5 !default;
+
+body {
+	margin: 0;
+	//font-family: 'Lato', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 'メイリオ', Meiryo, sans-serif !important;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, 'メイリオ', Meiryo, sans-serif !important;
+	color: $color-graydarker;
+	font-size:13px;
+}
+
+.hero {
+	background: $color-main;
+	padding: 20px 30px;
+	color: $color-white;
+	text-align: center;
+	@include text-shadow(0 1px 1px rgba(#000,.5));
+
+	h1 {
+		margin: 0;
+		font-weight:400;
+		font-size: 48px;
+	}
+	p {
+		margin: 0;
+	}
+
+	$icon-width: 40px;
+	$icon-height: 40px;
+	$color-1: #fff;
+	$color-background: $color-main;
+	.lic-sonar {
+		width: $icon-width;
+		height: $icon-height;
+
+		&:before {
+			width: $icon-width;
+			height: round($icon-height/2);
+			background-image: linear-gradient(to right, rgba($color-1, 0), rgba($color-1, 1));
+			@include background-image(linear-gradient(left, rgba($color-1,0) ,rgba($color-1,1)));
+		}
+		&:after {
+			width: round($icon-width/2);
+			height: round($icon-height/2);
+			@include border-radius($icon-width);
+			margin-top: - round($icon-height/4);
+			margin-left: - round($icon-width/4);
+			background: $color-background;
+		}
+	}}
+
+#{headings(2,6)} {
+	font-weight:400;
+}
+h2 {
+	font-size:32px;
+}
+h3 {
+	font-size:24px;
+}
+
+a {
+	color: $color-main;
+}
+
+.code {
+	display: block;
+	font-family: verdana;
+	margin: 1em 0;
+	padding: 10px;
+	background: $color-graylighter;
+	border: solid 1px  $color-graylight;
+	@include border-radius(5px);
+	overflow: auto;
+}
+
+hr {
+	margin: 40px 0;
+	border-width: 0 0 1px 0;
+	border-bottom:solid 1px $color-graylight;
+}
+
+
+.content {
+	margin: 0 0 40px 0;
+	padding: 20px 30px;
+}
+
+.icon-list {
+	margin: 20px 0;
+	padding: 0;
+
+	li {
+		width: 20%;
+		float:left;
+		list-style: none;
+		line-height: 50px;
+		white-space: nowrap;
+	}
+	span {
+		display: inline-block;
+		width: 50px;
+		text-align: center;
+	}
+}
+
+.sharebox {
+	padding:10px 0;
+	text-align: center;
+	border-top: solid 1px $color-graylight;
+	background: $color-graylighter;
+}
+.footer {
+	padding: 40px 0;
+	background: $color-graylight;
+	text-align: center;
+	color: $color-gray;
+
+	a {
+		color: $color-graydark;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-black;
+			text-decoration: underline;
+		}
+	}
+}
+
+//------------------------------
+// screen width under 768px
+//
+@media (max-width: 768px) {
+	.icon-list {
+		li {
+			width: 50%;
+		}
+	}
+}
+//------------------------------
+// screen width under 480px
+//
+@media (max-width: 480px) {
+	.icon-list {
+		li {
+			width: 100%;
+		}
+	}
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
