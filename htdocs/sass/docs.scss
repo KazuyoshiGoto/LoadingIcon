@@ -66,6 +66,7 @@ h3 {
 
 a {
 	color: $color-main;
+	@include transition(.1s linear);
 }
 
 .code {
@@ -86,9 +87,29 @@ hr {
 }
 
 
+.button {
+	@include inline-block;
+	padding: .5em 1em;
+	background: $color-main;
+	color: $color-white;
+	@include border-radius(10px);
+	text-decoration: none;
+
+	&:hover {
+		background: darken($color-main,10);
+	}
+}
 .content {
 	margin: 0 0 40px 0;
 	padding: 20px 30px;
+
+	.button {
+		font-size: 24px;
+	}
+}
+
+.archiveLink {
+	text-align: center;
 }
 
 .icon-list {
