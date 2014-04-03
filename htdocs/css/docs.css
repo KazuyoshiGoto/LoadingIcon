@@ -63,6 +63,10 @@ h3 {
 
 a {
   color: #39a2a5;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
 }
 
 .code {
@@ -86,9 +90,37 @@ hr {
   border-bottom: solid 1px #dddddd;
 }
 
+.button {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: .5em 1em;
+  background: #39a2a5;
+  color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.button:hover {
+  background: #2c7d7f;
+}
+
 .content {
   margin: 0 0 40px 0;
   padding: 20px 30px;
+}
+.content .button {
+  font-size: 24px;
+}
+
+.archiveLink {
+  text-align: center;
 }
 
 .icon-list {
